@@ -15,7 +15,7 @@ fn main() {
 
     let path = Path::new(&arg);
 
-    let mut image = RgbImage::new(200, 200);
+    let mut image = RgbImage::new(700, 700);
 
     let font = Vec::from(include_bytes!("DejaVuSans.ttf") as &[u8]);
     let font = FontCollection::from_bytes(font)
@@ -23,14 +23,14 @@ fn main() {
         .into_font()
         .unwrap();
 
-    let height = 12.4;
+    let height = 64.0;
     let scale = Scale {
-        x: height * 2.0,
+        x: height,
         y: height,
     };
     draw_text_mut(
         &mut image,
-        Rgb([0u8, 0u8, 255u8]),
+        Rgb([255u8, 255u8, 255u8]),
         0,
         0,
         scale,
